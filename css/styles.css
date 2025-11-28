@@ -37,7 +37,9 @@
 }
 
 /* Base */
-* {
+*,
+*::before,
+*::after {
 	box-sizing: border-box;
 }
 
@@ -76,6 +78,10 @@ p {
 	margin-top: 0;
 }
 
+a {
+	display: inline-block;
+}
+
 .vissualy-hidden {
 	position: absolute;
 	left: -10000px;
@@ -100,7 +106,7 @@ p {
 	padding: 48px 0;
 }
 
-.conteiner {
+.container {
 	width: 100%;
 	max-width: 1288px;
 	margin: 0 auto;
@@ -137,7 +143,7 @@ p {
 }
 
 /* Header */
-.header-conteiner {
+.header-container {
 	display: flex;
 	align-items: center;
 	gap: 40px;
@@ -213,12 +219,35 @@ p {
 	font-weight: 600;
 }
 
+.chef-text p {
+	margin-bottom: 24px;
+}
+
+.chef-text p:last-child {
+	margin-bottom: 0;
+}
+
 .chefs-title::before,
 .chefs-title::after {
 	display: block;
 	content: '';
 	width: 352px;
 	border: 2px solid var(--color-brand-light);
+}
+
+.chefs-list {
+	display: flex;
+	gap: 40px 30px;
+	flex-wrap: wrap;
+}
+
+.chefs-item {
+	flex-basis: calc((100% - 30px) / 2);
+}
+
+.chef-card {
+	display: flex;
+	gap: 30px;
 }
 
 .chefs-title {
@@ -242,7 +271,7 @@ p {
 	max-width: 710px;
 }
 
-.traditions-conteiner {
+.traditions-container {
 	display: flex;
 	justify-content: space-between;
 	gap: 40px;
@@ -267,6 +296,12 @@ p {
 }
 
 /* Format section */
+.formats-container {
+	display: flex;
+	gap: 32px;
+	align-items: center;
+}
+
 .formats-list {
 	display: flex;
 	flex-wrap: wrap;
@@ -314,6 +349,7 @@ p {
 	border-radius: 50%;
 	border: 1px solid var(--color-primary-dark);
 	cursor: pointer;
+	flex-shrink: 0;
 }
 
 .carousel-button:hover {
@@ -322,11 +358,49 @@ p {
 }
 
 /* Contact section */
+.contact-section {
+	padding-bottom: 96px;
+}
+
+.contact-container {
+	display: flex;
+	gap: 32px;
+}
+
+.contact-map {
+	flex-shrink: 0;
+	border: none;
+	border-radius: 16px;
+}
+
 .contact-title {
 	margin-bottom: 16px;
 }
 
 /* Footer */
+.footer {
+	padding: 32px 0;
+}
+
+.footer-container {
+	display: flex;
+	gap: 20px;
+}
+
+.footer-nav,
+.footer-address {
+	display: flex;
+	flex-basis: 50%;
+	gap: 20px;
+}
+
+.footer-logo,
+.footer-menu,
+.address-list,
+.address-info {
+	flex-grow: 1;
+}
+
 .adress-link {
 	color: var(--color-primary-light);
 	font-size: 16px;
