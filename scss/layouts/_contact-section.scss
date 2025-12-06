@@ -4,7 +4,8 @@
 
   &__container {
     display: flex;
-    gap: 32px;
+    flex-direction: row;
+    gap: 24px;
   }
 
   &__form-field {
@@ -21,6 +22,8 @@
     flex-shrink: 0;
     border: none;
     border-radius: 16px;
+    width: 600px;
+    height: 595px;
   }
 
   &__title {
